@@ -1,0 +1,942 @@
+@charset "UTF-8";
+/* font family cdn */
+@import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
+@import url('https://fonts.googleapis.com/css?family=Montserrat:100,300,400,600,800|Sacramento');
+/* font-family: 'Montserrat', sans-serif; */
+/* font-family: 'Sacramento', cursive; */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+ul,ol {
+  list-style: none;
+}
+button {
+  border: none;
+  background: none;
+  color: #444;
+  font-size: 18px;
+  font-family: 'Noto Sans KR', sans-serif;
+  cursor: pointer;
+}
+button:active, button:focus {
+  outline: none;
+}
+a {
+  text-decoration: none;
+  color: #444;
+}
+html,body {
+  width: 100%;
+  height: 100%;
+}
+body {
+  font-size: 18px;
+  font-family: 'Noto Sans KR', sans-serif;
+  color: #fff;
+  position: relative;
+}
+::selection {
+  background: #fff;
+  color: #5a5aff;
+}
+
+/* font family class */
+.fontStyle {
+  font-family: 'Montserrat', sans-serif;
+}
+.cursive {
+  font-family: 'Sacramento', cursive;
+}
+/* centering css */
+.centerX {
+  left: 50%;
+  transform: translateX(-50%);
+}
+.centerY {
+  top: 50%;
+  transform: translateY(-50%);
+}
+.centerXY {
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+}
+.marginAuto {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+/* ------- main header ------- */
+/* main header jquery scroll event class */
+#main_header.shrink {
+  height: 60px;
+  border-bottom: 1px solid #eee;
+}
+#main_header.shrink #main_menu {
+  height: 60px;
+  top: 30px;
+}
+#main_header.shrink #logo a {
+  height: 60px;
+  line-height: 60px;
+}
+#main_header {
+  width: 100%;
+  height: 80px;
+  position: fixed;
+  left: 0;
+  top: 0;
+  border-bottom: 1px solid #fff;
+  background: #fff;
+  z-index: 999;
+  transition: .4s;
+}
+/* logo */
+#logo a {
+  /* border: 1px solid red; */
+  height: 80px;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  transition: .4s;
+  padding-left: 20px;
+  padding-right: 20px;
+  font-size: 18px;
+  letter-spacing: 2px;
+  font-weight: 700;
+  line-height: 80px;
+  color: #5A5AFF;
+
+}
+#logo a > img {
+}
+/* main menu btn */
+#main_menu {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  /* border: 1px solid blue; */
+  top: 40px;
+  right: 0;
+  transition: .4s;
+  padding-left: 25px;
+}
+/* main menu button line */
+#main_menu > .btn_line {
+  display: block;
+  width: 30px;
+  height: 2px;
+  background: #444;
+  position: relative;
+  left: -1px;
+  transition: .3s;
+  transform-origin: right;
+}
+#main_menu > .btn_line:first-child {
+  margin-bottom: 10px;
+}
+/* main menu button hover effect */
+#main_menu:hover >.btn_line:first-child {
+  width: 15px;
+}
+/* main menu button to X */
+#main_menu >.btn_line:first-child.nonActive {
+  width: 0;
+}
+/* gnb */
+#gnb {
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  position: fixed;
+  right: -100%;
+  top: 0;
+  overflow: hidden;
+  transition: .4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  z-index: 998;
+}
+/* gnb active class */
+#gnb.on {
+  right: 0;
+}
+#gnb {
+  background: #333;
+}
+#gnb > ul {
+  position: absolute;
+  text-align: center;
+}
+#gnb > ul > li {
+  position: relative;
+}
+/* gnb 안의 앵커태그 */
+#gnb > ul a {
+  text-align: center;
+  color: #5A5AFF;
+  font-size: 65px;
+  font-weight: 300;
+  /* border: 1px solid red; */
+  display: block;
+  width: 100%;
+  padding: 0 20px;
+  position: relative;
+}
+/* gnb hover에 넣을 line style */
+#gnb > ul span {
+
+  display: block;
+  width: 0%;
+  height: 2px;
+  background: #FFB255;
+  position: absolute;
+  top: 60%;
+  transform: translateY(-50%);
+}
+#gnb > ul li:hover span {
+  width: 100%;
+  transition: .4s;
+}
+
+/* section 1 : main visual */
+#main #main_visual {
+  background: #333;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  left: 0px;
+  top: 0;
+  z-index: -99;
+}
+/* section 1 공간확보 */
+#main #main_visual_safe {
+  width: 100%;
+  height: 100%;
+  /* border: 1px solid red; */
+  position: relative;
+}
+/* section 1 ) title  */
+#main #title_box {
+  color: #5A5AFF;
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  padding: 20px;
+  border: 8px solid #444;
+}
+#main #title_box .title_wrap {
+  /* border: 1px solid red; */
+  position: absolute;
+  left: 30px;
+  top: 14px;
+}
+/* scroll effect */
+#main #title_box.color {
+  color: #444;
+}
+#main #title_box .title_style {
+  font-size: 70px;
+  font-weight: 600;
+  /* border: 1px solid red; */
+  width: 230px;
+  position: relative;
+  letter-spacing: 5px;
+  transition: 1s;
+}
+/* main title letter to right */
+#main #title_box .title_style > .font_positioning {
+  position: absolute;
+  right: 0;
+}
+#main #title_box .title_style > .line {
+  display: inline-block;
+  height: 8px;
+  background: #444;
+  position: relative;
+  bottom: 20px;
+}
+/* first line  */
+#main #title_box .title_style:nth-child(1) > .line {
+  width: 40px;
+  margin-left: 5px;
+}
+/* second lind */
+#main #title_box .title_style:nth-child(2) > .line {
+  width: 50px;
+  margin-left: 5px;
+}
+/* third line */
+#main #title_box .title_style:nth-child(3) > .line {
+  width: 70px;
+  margin-left: 6px;
+}
+/* design projects 문구 앞 라인 */
+/* #main .main_line {
+  display: block;
+  position: absolute;
+  width: 200px;
+  height: 1px;
+  background: #444;
+  right: 230px;
+  top: 100.5px;
+} */
+/* main copy caption */
+#main .title_caption {
+  position: absolute;
+  left: -60px;
+  top: 50%;
+  font-size: 16px;
+  letter-spacing: 2px;
+  font-weight: 600;
+  transform: rotate(-90deg);
+  color: #5A5AFF;
+}
+#main .title_caption_right {
+  position: absolute;
+  right: -35px;
+  transform: rotate(90deg);
+  letter-spacing: 2px;
+  font-weight: 600;
+  font-size: 16px;
+  color: #5a5aff;
+}
+/* section 2 : projects */
+#main #main_projects {
+  width: 100%;
+  height: 2150px;
+  padding-bottom: 50px;
+  position: relative;
+  background: #333;
+}
+#main #main_projects .frame_box {
+  position: relative;
+}
+/* section title style */
+#main .box_behind_title {
+  width: 25%;
+  height: 100px;
+  background: #5a5aff;
+  position: absolute;
+  top: -50px;
+  /* display: none; */
+}
+#main .section_title {
+  font-size: 80px;
+  letter-spacing: 3px;
+  font-weight: 700;
+  position: relative;
+}
+#main .cursive_title {
+  font-size: 40px;
+  color: #5a5aff;
+}
+/* projects caption class */
+#main #main_projects .caption_writer {
+  font-size: 14px;
+  color: #666;
+}
+/* project caption positioning  */
+#main #main_projects .text_webdesign .caption_writer {
+  position: absolute;
+  top: 461px;
+  left: 0;
+}
+#main #main_projects .text_graphicdesign .caption_writer {
+  position: absolute;
+  right: 0;
+  top: 684px;
+}
+#main #main_projects .text_illustdesign .caption_writer {
+  position: absolute;
+  left: 0;
+  top: 286px;
+}
+/* section1 : web design box */
+#main #main_projects .box_webdesign_wrap {
+  position: absolute;
+  width: 65%;
+  height: 500px;
+  top: 250px;
+  right: 0;
+}
+#main #main_projects .box_webdesign {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #333;
+  overflow: hidden;
+}
+/* section1 : graphic design box */
+#main #main_projects .box_graphicdesign_wrap {
+  width: 700px;
+  height: 700px;
+  background: #333;
+  position: absolute;
+  top: 850px;
+  left: 0;
+}
+#main #main_projects .box_graphicdesign {}
+#main #main_projects .box_graphicdesign .graphic_box {
+  width: 345px;
+  height: 345px;
+  background: #5a5aff;
+  float: left;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+#main #main_projects .box_graphicdesign .graphic_box > p {
+  background: #2a2a2a;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 345px;
+  height: 100px;
+  color: #ccc;
+  font-weight: 100;
+  letter-spacing: -1px;
+  padding-top: 22px;
+  padding-left: 20px;
+  transition: .4s cubic-bezier(0.645, 0.045, 0.355, 1);
+
+}
+#main #main_projects .box_graphicdesign .graphic_box:hover > p {
+  height: 350px;
+  padding-top: 145px;
+}
+#main #main_projects .box_graphicdesign .graphic_box > p > span.sub_title {
+  color: #5a5aff;
+  font-size: 16px;
+  font-weight: 400;
+  display: block;
+}
+#main #main_projects .box_graphicdesign .graphic_box:hover span.tools {
+  bottom: 20px;
+  opacity: 1;
+}
+#main #main_projects .box_graphicdesign .graphic_box > p > span.tools {
+  font-size: 12px;
+  color: #666;
+  position: absolute;
+  bottom: -60px;
+  right: 20px;
+  letter-spacing: 0px;
+  opacity: 0;
+  transition: .4s;
+}
+#main #main_projects .box_graphicdesign .graphic_box:nth-child(2n-1) {
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+/* popup class */
+#main #main_projects .box_graphicdesign .graphic_box:first-child {
+  background: url(../images/banner2_gray.jpg) no-repeat;
+  background-size: cover;
+}
+#main #main_projects .box_graphicdesign .graphic_box:nth-child(2) {
+  background: url(../images/banner3_gray.jpg) no-repeat;
+  background-size: cover;
+}
+#main #main_projects .box_graphicdesign .graphic_box:nth-child(3) {
+  background: url(../images/banner1_gray.jpg) no-repeat;
+  background-size: cover;
+}
+#main #main_projects .box_graphicdesign .graphic_box:nth-child(4) {
+  background: url(../images/poster_gray.jpg) no-repeat;
+  background-size: cover;
+}
+/* section1 : illustration box */
+#main #main_projects .box_illustdesign_wrap {
+  width: 800px;
+  height: 300px;
+  background: #333;
+  position: absolute;
+  top: 1650px;
+  right: 0;
+}
+#main #main_projects .box_illustdesign {
+  position: relative;
+  /* border: 1px solid red; */
+  overflow: hidden;
+}
+#main #main_projects #illust_btn_wrap {
+  position: absolute;
+  bottom: -19px;
+  right: 0px;
+  z-index: 777;
+  overflow: hidden;
+}
+/* illustration btn prev and next */
+#main #main_projects #illust_btn_wrap > button {
+  color: #5a5aff;
+  background: #333;
+  float: left;
+  width: 130px;
+  height: 50px;
+  font-weight: 600;
+  position: relative;
+}
+#main #main_projects #illust_btn_wrap > button:hover > span.line {
+  width: 70px;
+}
+#main #main_projects #illust_btn_wrap > button > span.line {
+  width: 0px;
+  height: 1px;
+  background: #ffb255;
+  position: absolute;
+  left: 3px;
+  top: 27px;
+  transition: .4s;
+}
+#main #main_projects #illust_btn_wrap > button:first-child > span.line {
+  left: 30px;
+}
+#main #main_projects #illust_btn_wrap > button:nth-child(1) i {
+  margin-right: 8px;
+}
+#main #main_projects #illust_btn_wrap > button:nth-child(2) {
+  width: 70px;
+  text-align: right;
+}
+#main #main_projects #illust_btn_wrap > button:nth-child(2) i {
+  margin-left: 8px;
+}
+#main #main_projects #illust_btn_wrap > button > i {
+  position: relative;
+  top: 3px;
+}
+  #main #main_projects .box_illustdesign .illust_wrap {
+    width: 4000px;
+    position: relative;
+    left: 0;
+  }
+#main #main_projects .box_illustdesign .illust_wrap > ul{
+  overflow: hidden;
+}
+#main #main_projects .box_illustdesign .illust_wrap > ul > li {
+  width: 800px;
+  height: 300px;
+  /* border: 1px solid red; */
+  float: left;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+
+}
+/* illustration caption hover effect */
+#main #main_projects .box_illustdesign .illust_wrap li:hover .illust_caption {
+  left: 0;
+  padding-left: 30px;
+}
+#main #main_projects .box_illustdesign .illust_wrap li:hover img {
+  padding-left: 60px;
+}
+#main #main_projects .box_illustdesign .illust_wrap img {
+  transition: .5s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+/* illustration caption */
+#main #main_projects .box_illustdesign .illust_wrap .illust_caption {
+  position: absolute;
+  top: 0;
+  left: -230px;
+  background: #2a2a2a;
+  width: 230px;
+  height: 300px;
+  padding-top: 30px;
+  padding-left: 100;
+  overflow: hidden;
+  transition: .4s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+#main #main_projects .box_illustdesign .illust_wrap .illust_caption span {
+  display: block;
+}
+#main #main_projects .box_illustdesign .illust_wrap .illust_caption .title {
+  font-weight: 100;
+  transition: .4s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+#main #main_projects .box_illustdesign .illust_wrap .illust_caption .sub_title {
+  color: #5a5aff;
+  font-size: 16px;
+  transition: .4s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+#main #main_projects .box_illustdesign .illust_wrap .illust_caption .tools {
+  font-size: 12px;
+  color: #666;
+  position: absolute;
+  left: 30px;
+  bottom: 30px;
+    transition: .4s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+/* project title */
+#main #main_projects .text_webdesign > h3,#main #main_projects .text_graphicdesign > h3,#main #main_projects .text_illustdesign > h3 {
+  font-size: 18px;
+  font-weight: 500;
+}
+#main #main_projects .text_webdesign > h3 > span,#main #main_projects .text_graphicdesign > h3 > span,#main #main_projects .text_illustdesign > h3 > span {
+  font-size: 18px;
+  font-weight: 700;
+  color: #5a5aff;
+  margin-right: 15px;
+}
+#main #main_projects .text_webdesign {
+  position: absolute;
+  top: 250px;
+  left: 0;
+
+}
+#main #main_projects .project_list {
+  font-size: 16px;
+  font-weight: 100;
+  margin-top: 40px;
+  letter-spacing: -1px;
+  color: #ccc;
+}
+#main #main_projects .project_list span {
+  font-weight: 700;
+  letter-spacing: 0;
+  margin-right: 10px;
+  display: inline-block;
+  color: #666;
+}
+#main #main_projects .text_graphicdesign {
+  position: absolute;
+  top: 850px;
+  right: 0;
+}
+#main #main_projects .text_illustdesign {
+  position: absolute;
+  top: 1650px;
+  left: 0;
+}
+/* web design button */
+#main #main_projects .box_webdesign_wrap .btn_wrap {
+  position: absolute;
+  bottom: -15px;
+  left: -100px;
+  z-index: 997;
+  overflow: hidden;
+}
+#main #main_projects .box_webdesign_wrap .btn_wrap > button{
+  color: #5a5aff;
+  background: #333;
+  float: left;
+  /* border: 1px solid red; */
+  width: 130px;
+  height: 50px;
+  font-weight: 600;
+  position: relative;
+}
+#main #main_projects .box_webdesign_wrap .btn_wrap >button:hover > span {
+  width: 80px;
+}
+#main #main_projects .box_webdesign_wrap .btn_wrap >button > span {
+  display: inline-block;
+  position: absolute;
+  width: 0px;
+  height: 1px;
+  background: #ffb255;
+  top: 26px;
+  left: 20px;
+  transition: .4s;
+  z-index: 996;
+}
+#main #main_projects .box_webdesign_wrap .btn_wrap > button > i {
+  position: relative;
+  top: 2px;
+}
+#main #main_projects .box_webdesign_wrap .btn_wrap > button > .fa-angle-left {
+  margin-right: 10px;
+}
+#main #main_projects .box_webdesign_wrap .btn_wrap > button > .fa-angle-right {
+  margin-left: 10px;
+}
+/* web design _ img*/
+#main #main_projects .box_webdesign .slider_wrap {
+  overflow: hidden;
+  width: 2500px;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+#main #main_projects .box_webdesign .slider_wrap a {
+  float: left;
+  position: relative;
+}
+#main #main_projects .box_webdesign .slider_wrap a > img {
+  transition: .4s;
+}
+#main #main_projects .box_webdesign .slider_wrap a:hover > img {
+  padding-top: 30px;
+}
+
+/* web design thumbnail hover effect */
+#main #main_projects .box_webdesign .slider_wrap a:hover > p {
+  height: 120px;
+}
+#main #main_projects .box_webdesign .slider_wrap a:hover > p > .thumb_title{
+  margin-top: 30px;
+  opacity: 1;
+}
+#main #main_projects .box_webdesign .slider_wrap a:hover > p > .thumb_caption {
+  opacity: 1;
+}
+#main #main_projects .box_webdesign .slider_wrap a:hover .thumb_info {
+  top: 30px;
+  opacity: 1;
+}
+/* thumbnail caption */
+#main #main_projects .box_webdesign .slider_wrap a > p {
+  background: #2a2a2a;
+  color: #fff;
+  height: 0;
+  width: 500px;
+  overflow: hidden;
+  transition: .4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding-left: 30px;
+}
+#main #main_projects .box_webdesign .slider_wrap a > p > span {
+  display: block;
+}
+#main #main_projects .box_webdesign .slider_wrap .thumb_title {
+  font-size: 20px;
+  font-weight: 100;
+  margin-top: 0px;
+  transition: .4s;
+  color: #ccc;
+  opacity: 0;
+  letter-spacing: -1px;
+}
+#main #main_projects .box_webdesign .slider_wrap .thumb_caption {
+  font-size: 16px;
+  color: #5a5aff;
+  opacity: 0;
+  transition: .4s;
+}
+#main #main_projects .box_webdesign .slider_wrap .thumb_info {
+  color : #666;
+  font-size: 12px;
+  text-align: right;
+  position: absolute;
+  right: 30px;
+  top: 0px;
+  opacity: 0;
+  transition: .4s;
+}
+
+/* section 2 : .about */
+#main #main_about {
+  position: relative;
+  background: #333;
+  /* border: 1px solid red; */
+  height: 900px;
+}
+#main #main_about  .frame_box {
+  position: relative;
+}
+#main #main_about #profile_photo {
+  position: absolute;
+  left: 0;
+  top: 230px;
+  width: 50%;
+  height: 500px;
+  background: #5a5aff;
+  background: url(../images/profile.jpg) no-repeat;
+  background-size: cover;
+  background-position: center bottom;
+}
+#main #main_about #profile_caption {
+  position: absolute;
+  top: 410px;
+  left: 250px;
+}
+#main #main_about #profile_caption .title {
+  font-size: 40px;
+  font-weight: 100;
+
+}
+#main #main_about #profile_caption .title > strong {
+  font-weight: 400;
+  margin-left: 50px;
+}
+#main #main_about .profile_info {
+  position: absolute;
+  right: 0;
+  top: 230px;
+  font-weight: 300;
+  color: #ccc;
+}
+#main #main_about .profile_info > h3,#main #main_about .profile_info2 > h3 {
+  font-weight: 700;
+  font-size: 18px;
+  color: #5a5aff;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+}
+#main #main_about .profile_info2 {
+  position: absolute;
+  right: 37px;
+  top: 400px;
+  font-weight: 300;
+  color: #ccc;
+}
+/* footer */
+footer {
+  background: #2a2a2a;
+  color: #ccc;
+  font-weight: 100;
+  font-size: 16px;
+}
+footer .frame_box {
+  position: relative;
+}
+footer .footer_left, footer .footer_right {
+  width: 50%;
+  height: 500px;
+}
+/* footer - left */
+footer .footer_left {
+  padding-top: 30px;
+}
+footer .footer_logo {
+  font-weight: 700;
+  font-size: 18px;
+  letter-spacing: 2px;
+  color: #5a5aff;
+}
+footer .copyright {
+  font-size: 14px;
+  color: #666;
+}
+footer .footer_info {
+  margin-top: 30px;
+}
+footer .footer_info > li:first-child {
+  font-weight: 500;
+}
+footer .footer_info > li:first-child > span {
+  font-weight: 100;
+}
+footer .footer_info > li:nth-child(2) {
+  margin-bottom: 20px;
+}
+footer .footer_info > li:nth-child(2) > span {
+  color: #5a5aff;
+  font-weight: 600;
+}
+footer .footer_info > li > i {
+  color: #5a5aff;
+  margin-right: 10px;
+}
+/* footer right - contact */
+footer .footer_right {
+  padding: 50px 50px 50px 50px;
+  background: #5a5aff;
+  position: absolute;
+  left: 50%;
+  top: -20px;
+  color: #fff;
+}
+footer .footer_right .contact_title {
+  font-weight: 600;
+  font-size: 18px;
+  letter-spacing: 2px;
+}
+footer .footer_right .contact_text {
+  font-size: 14px;
+  color: #aaa;
+  margin-bottom: 50px;
+}
+footer .footer_right .contact_input_wrap {
+  margin-bottom: 20px;
+}
+footer .footer_right .contact_input_wrap label {
+  display: inline-block;
+  width: 120px;
+  color: #ffb255;
+  font-weight: 500;
+}
+footer .footer_right .contact_input_wrap input {
+  display: inline-block;
+  width: 100%;
+  background: none;
+  border-bottom: 1px solid #ffb255;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  font-size: 18px;
+  height: 30px;
+  margin-top: 5px;
+  color: #fff;
+  font-weight: 100;
+}
+footer .footer_right > button {
+  color: #ffb255;
+  font-size: 16px;
+  border: 1px solid #ffb255;
+  padding: 5px 20px;
+  width: 100px;
+  position: relative;
+  margin-top: 40px;
+  transition: .4s;
+}
+footer .footer_right > button:hover {
+  background: #ffb255;
+  color: #fff;
+}
+
+
+/* --------------layout class----------------- */
+.frame_1100 {
+  width: 100%;
+  max-width: 1200px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.frame_box {
+  width: 100%;
+}
+/* graphic design popup */
+#main .popup_bg.on {
+  display: block;
+}
+#main .popup_bg {
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,.6);
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 9999;
+  display: none;
+}
+#main .popup_bg .graphic.on {
+  display: block;
+}
+#main .popup_bg .graphic img,#main .popup_bg .illust img {
+  /* border: 1px solid red; */
+  margin: 0;
+  box-shadow: 0 0 15px 1px rgba(0,0,0,.3);
+}
+#main .popup_bg .graphic {
+  position: absolute;
+  display: none;
+  height: auto;
+
+  /* border: 1px solid red; */
+}
+#main .popup_bg .illust {
+  position: absolute;
+  display: none;
+  height: auto;
+
+  /* border: 1px solid red; */
+}
