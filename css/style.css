@@ -145,12 +145,12 @@ body {
 /* main menu button to X */
 #main_menu >.btn_line:first-child.nonActive {
   top: 6px;
-  transform: rotate(45deg);
+  transform: rotate(135deg);
   transform-origin: 50% 50%;
 }
 #main_menu >.btn_line:nth-child(2).nonActive {
   top: -6px;
-  transform: rotate(-45deg);
+  transform: rotate(-135deg);
   transform-origin: 50% 50%;
 }
 /* gnb */
