@@ -657,7 +657,8 @@ body {
 /* web design _ img*/
 #main #main_projects .box_webdesign .slider_wrap {
   overflow: hidden;
-  width: 2500px;
+  height: 500px;
+  width: 3000px;
   position: absolute;
   left: 0;
   top: 0;
@@ -665,6 +666,9 @@ body {
 #main #main_projects .box_webdesign .slider_wrap a {
   float: left;
   position: relative;
+  display: block;
+  width: 500px;
+  height: 500px;
 }
 #main #main_projects .box_webdesign .slider_wrap a > img {
   transition: .4s;
