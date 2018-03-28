@@ -131,6 +131,7 @@ body {
   height: 2px;
   background: #444;
   position: relative;
+  top: 0;
   left: -1px;
   transition: .3s;
   transform-origin: right;
@@ -140,11 +141,17 @@ body {
 }
 /* main menu button hover effect */
 #main_menu:hover >.btn_line:first-child {
-  width: 15px;
 }
 /* main menu button to X */
 #main_menu >.btn_line:first-child.nonActive {
-  width: 0;
+  top: 6px;
+  transform: rotate(45deg);
+  transform-origin: 50% 50%;
+}
+#main_menu >.btn_line:nth-child(2).nonActive {
+  top: -6px;
+  transform: rotate(-45deg);
+  transform-origin: 50% 50%;
 }
 /* gnb */
 #gnb {
@@ -683,7 +690,7 @@ body {
 }
 #main #main_projects .box_webdesign .slider_wrap a:hover > p > .thumb_title{
   margin-top: 30px;
-  opacity: 1;
+  opacity: 1;d
 }
 #main #main_projects .box_webdesign .slider_wrap a:hover > p > .thumb_caption {
   opacity: 1;
