@@ -50,7 +50,7 @@ $(function(){
 
   //web project - next btn
   $('#web_next').click(function(){
-    if(moveValue > -2000) {
+    if(moveValue > -2500) {
       moveValue = moveValue - 500;
       $('#main #main_projects .box_webdesign .slider_wrap')
         .animate({
