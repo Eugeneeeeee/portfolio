@@ -19,7 +19,7 @@ $(function(){
   });
   //main menu button changes
   $('#main_menu').click(function(){
-    $(this).find('.btn_line').eq(0).toggleClass('nonActive')
+    $(this).find('.btn_line').toggleClass('nonActive')
   });
   // scroll > header shrinks
   var shrinkHeader = 300;
