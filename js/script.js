@@ -110,7 +110,7 @@ $(function(){
         scrollTop: 0
     }, 400);
     $('#gnb').removeClass('on');
-    $('#main_menu').find('.btn_line').eq(0).removeClass('nonActive');
+    $('#main_menu').find('.btn_line').removeClass('nonActive');
     return false;
   });
   $('#gnb > ul > li').eq(1).find('a').click(function(){
@@ -118,7 +118,7 @@ $(function(){
         scrollTop: projectTop - 80
     }, 400);
     $('#gnb').removeClass('on');
-    $('#main_menu').find('.btn_line').eq(0).removeClass('nonActive');
+    $('#main_menu').find('.btn_line').removeClass('nonActive');
     return false;
   });
   $('#gnb > ul > li').eq(2).find('a').click(function(){
@@ -126,7 +126,7 @@ $(function(){
         scrollTop: aboutTop - 80
     }, 400);
     $('#gnb').removeClass('on');
-    $('#main_menu').find('.btn_line').eq(0).removeClass('nonActive');
+    $('#main_menu').find('.btn_line').removeClass('nonActive');
     return false;
   });
   $('#gnb > ul > li').eq(3).find('a').click(function(){
@@ -139,7 +139,7 @@ $(function(){
   });
   $('#gnb > ul > li').eq(4).find('a').click(function(){
     $('#gnb').removeClass('on');
-    $('#main_menu').find('.btn_line').eq(0).removeClass('nonActive');
+    $('#main_menu').find('.btn_line').removeClass('nonActive');
   });
 
   // graphic popup function {
