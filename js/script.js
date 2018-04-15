@@ -134,7 +134,7 @@ $(function(){
         scrollTop: footerTop - 160
     }, 400);
     $('#gnb').removeClass('on');
-    $('#main_menu').find('.btn_line').eq(0).removeClass('nonActive');
+    $('#main_menu').find('.btn_line').removeClass('nonActive');
     return false;
   });
   $('#gnb > ul > li').eq(4).find('a').click(function(){
